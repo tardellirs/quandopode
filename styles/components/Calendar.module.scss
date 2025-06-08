@@ -173,7 +173,7 @@
           }
 
           &.selected {
-            background: #f93636;
+            background: var(--mb-red);
           }
 
           &.faded {
@@ -188,7 +188,7 @@
                 background: var(--mid-gray);
 
                 &.selected {
-                  background: #2e7d32;
+                  background: var(--mb-red-hover);
                 }
               }
             }

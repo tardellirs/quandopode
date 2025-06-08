@@ -50,7 +50,7 @@ export default function TimeRangeSlider(props: Props) {
         sx={{
           width: 336,
           height: 12,
-          color: '#f93636',
+          color: 'var(--mb-red)',
           '& .MuiSlider-thumb': {
             transition: 'none',
             height: 24,
