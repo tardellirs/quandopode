@@ -207,7 +207,7 @@ export default function DatesPicker(props: Props) {
           ))}
         </div>
       </div>
-      <p>Click and drag to select date ranges.</p>
+      <p>Clique e arraste para selecionar intervalos de datas.</p>
     </div>
   )
 }

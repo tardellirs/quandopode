@@ -381,7 +381,7 @@ export default function Calendar(props: Props) {
           </div>
           <div className={styles.names}>
             {!props.respondents ? (
-              <p className={styles.name}>Loading...</p>
+              <p className={styles.name}>Carregando...</p>
             ) : (
               props.respondents.map((r, i) => (
                 <p

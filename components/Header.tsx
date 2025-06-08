@@ -39,10 +39,10 @@ export default function Header(props: Props) {
         >
           GitHub
         </a>
-        <Link href='/about'>About</Link>
+        <Link href='/about'>Sobre</Link>
         <button onClick={() => Router.push('/')}>
           <Image src='/icons/add.svg' width='24' height='24' alt='add.svg' />
-          New Event
+          Novo Evento
         </button>
       </div>
     </div>

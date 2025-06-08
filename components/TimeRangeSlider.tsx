@@ -99,7 +99,7 @@ export default function TimeRangeSlider(props: Props) {
         disableSwap
         marks={marks}
       />
-      <p>Slide the begin and end times left and right.</p>
+      <p>Arraste os horários inicial e final para a esquerda e direita.</p>
     </div>
   )
 }

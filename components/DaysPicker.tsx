@@ -117,7 +117,7 @@ export default function DaysPicker(props: Props) {
             </div>
           ))}
       </div>
-      <p>Click and drag to select day ranges.</p>
+      <p>Clique e arraste para selecionar intervalos de dias.</p>
     </div>
   )
 }

@@ -9,17 +9,18 @@ export default function About() {
         <div className={styles.content}>
           <h1>MeetingBrew</h1>
           <p>
-            MeetingBrew is a modern scheduling tool to help you find the best
-            communal time to meet. It was built by two computer science students
-            at the University of Michigan. Thank you for using MeetingBrew!
+            MeetingBrew é uma ferramenta moderna de agendamento que ajuda a
+            encontrar o melhor horário em comum para reunir. Foi criada por dois
+            estudantes de ciência da computação da Universidade de Michigan.
+            Obrigado por usar o MeetingBrew!
           </p>
           <div className={styles.contact}>
             <p>
-              Contact us:{' '}
+              Entre em contato:{' '}
               <a href='mailto:hi@meetingbrew.com'>hi@meetingbrew.com</a>
             </p>
             <p>
-              Star MeetingBrew on GitHub:{' '}
+              Dê uma estrela ao MeetingBrew no GitHub:{' '}
               <a href='https://github.com/csaye/meetingbrew' target='_blank' rel='noopener noreferrer'>
                 github.com/csaye/meetingbrew
               </a>

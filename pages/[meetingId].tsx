@@ -87,7 +87,7 @@ export default function MeetingPage() {
     function onBeforeUnload(e: BeforeUnloadEvent) {
       if (saved) return
       e.preventDefault()
-      return (e.returnValue = 'Changes you made may not be saved.')
+      return (e.returnValue = 'As alterações podem não ser salvas.')
     }
     window.addEventListener('beforeunload', onBeforeUnload)
     return () => window.removeEventListener('beforeunload', onBeforeUnload)
@@ -192,7 +192,7 @@ export default function MeetingPage() {
     if (!respondents) return
     // return if input name not set
     if (!inputName) {
-      window.alert('Please enter your name.')
+      window.alert('Por favor, digite seu nome.')
       nameRef.current?.focus()
       return
     }
@@ -224,8 +224,8 @@ export default function MeetingPage() {
   function NoMeeting() {
     return (
       <div className={styles.noMeeting}>
-        <h2>No meeting found!</h2>
-        <Link href='/'>Go to home</Link>
+        <h2>Reunião não encontrada!</h2>
+        <Link href='/'>Ir para a página inicial</Link>
       </div>
     )
   }
@@ -240,7 +240,7 @@ export default function MeetingPage() {
         {meeting === null || respondents === null ? (
           <NoMeeting />
         ) : !meeting ? (
-          <h2>Loading...</h2>
+          <h2>Carregando...</h2>
         ) : (
           <div className={styles.content} ref={contentRef}>
             <h1>{meeting.title}</h1>
@@ -257,7 +257,7 @@ export default function MeetingPage() {
                       height='24'
                       alt='backArrow.svg'
                     />
-                    Cancel
+                    Cancelar
                   </button>
                 ) : name ? (
                   <button
@@ -270,7 +270,7 @@ export default function MeetingPage() {
                       height='24'
                       alt='check.svg'
                     />
-                    Done
+                    Concluir
                   </button>
                 ) : (
                   <button
@@ -283,12 +283,12 @@ export default function MeetingPage() {
                       height='24'
                       alt='calendar.svg'
                     />
-                    Respond
+                    Responder
                   </button>
                 )}
                 {!!name ? (
                   <span className={styles.savingSpan}>
-                    {saved ? 'Saved' : 'Saving...'}
+                    {saved ? 'Salvo' : 'Salvando...'}
                   </span>
                 ) : inputtingName ? (
                   <span className={styles.inviteButtonPlaceholder} />
@@ -308,7 +308,7 @@ export default function MeetingPage() {
                           height='24'
                           alt='link.svg'
                         />
-                        Copied
+                        Copiado
                       </>
                     ) : (
                       <>
@@ -318,7 +318,7 @@ export default function MeetingPage() {
                           height='24'
                           alt='link.svg'
                         />
-                        Invite
+                        Convidar
                       </>
                     )}
                   </button>
@@ -366,7 +366,7 @@ export default function MeetingPage() {
               />
             </div>
             <p className={styles.info}>
-              ⓘ If returning, enter same name to edit response
+              ⓘ Se voltar, digite o mesmo nome para editar a resposta
             </p>
             <div className={styles.content}>
               <div className={styles.respondents}>
@@ -381,7 +381,7 @@ export default function MeetingPage() {
                   />
                   {hoverInterval
                     ? intervalTimeString(hoverInterval)
-                    : 'Respondents'}
+                    : 'Participantes'}
                 </p>
                 {inputtingName && (
                   <div className={styles.nameInput}>
@@ -393,7 +393,7 @@ export default function MeetingPage() {
                         if (e.key === 'Enter') saveName()
                         if (e.key === 'Escape') setInputtingName(false)
                       }}
-                      placeholder='Name'
+                      placeholder='Nome'
                       maxLength={50}
                       spellCheck='false'
                     />
@@ -408,9 +408,9 @@ export default function MeetingPage() {
                   </div>
                 )}
                 {!respondents ? (
-                  <p>Loading...</p>
+                  <p>Carregando...</p>
                 ) : !respondents.length && !inputtingName ? (
-                  <p>No respondents yet.</p>
+                  <p>Nenhum participante ainda.</p>
                 ) : (
                   respondents.map((respondent, i) => (
                     <div
@@ -534,7 +534,8 @@ export default function MeetingPage() {
                 {name && (
                   <>
                     <p>
-                      Click and drag to select times that you are available.
+                      Clique e arraste para selecionar os horários em que você
+                      está disponível.
                     </p>
                     {meeting.type === 'dates' ? (
                       <Calendar

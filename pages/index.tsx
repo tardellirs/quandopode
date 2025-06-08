@@ -64,23 +64,23 @@ export default function Index() {
   async function createMeeting() {
     // if no title given
     if (!title) {
-      window.alert('Must enter a title.')
+      window.alert('É necessário inserir um título.')
       titleInput.current?.focus()
       return
     }
     // if no dates selected
     if (datesOption.value === 'dates' && !dates.length) {
-      window.alert('Must select at least one date.')
+      window.alert('É necessário selecionar ao menos uma data.')
       return
     }
     // if too many dates selected
     if (datesOption.value === 'dates' && dates.length > 31) {
-      window.alert('Too many dates selected. Maximum is 31.')
+      window.alert('Muitas datas selecionadas. O máximo é 31.')
       return
     }
     // if no days selected
     if (datesOption.value === 'days' && !days.length) {
-      window.alert('Must select at least one day.')
+      window.alert('É necessário selecionar ao menos um dia.')
       return
     }
     const meetingsRef = collection(db, 'meetings')
@@ -97,7 +97,7 @@ export default function Index() {
       }
       // if id not available
       if (idReserved || idTaken) {
-        window.alert('Meeting ID taken. Please choose another.')
+        window.alert('ID da reunião indisponível. Escolha outro.')
         return
       }
     }
@@ -211,7 +211,7 @@ export default function Index() {
                 height='24'
                 alt='add.svg'
               />
-              Create Event
+              Criar Evento
             </button>
           </div>
         </div>
