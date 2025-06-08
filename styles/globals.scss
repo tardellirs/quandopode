@@ -8,9 +8,9 @@
   --dark-white: #f0f0f0;
   --dim-white: #fafafa;
   --white: #fff;
-  --mb-red: #fa3737;
-  --mb-red-hover: #e83232;
-  --mb-red-active: #d62e2e;
+  --mb-red: #4caf50;
+  --mb-red-hover: #43a047;
+  --mb-red-active: #388e3c;
   --header: 96px;
 }
 
@@ -19,7 +19,7 @@
 
   &::selection {
     // color: var(--white);
-    background: #ffde69;
+    background: #c5e1a5;
   }
 }
 

@@ -41,10 +41,10 @@ export const selectStyles = {
     background: state.isSelected
       ? 'var(--mb-red)'
       : state.isFocused
-      ? 'rgba(250, 56, 56, 0.2)'
+      ? 'rgba(76, 175, 80, 0.2)'
       : undefined,
     '&:active': {
-      background: 'rgba(250, 56, 56, 0.33)',
+      background: 'rgba(76, 175, 80, 0.33)',
     },
   }),
 }

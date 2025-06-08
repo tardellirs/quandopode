@@ -44,11 +44,11 @@ export function sampleGradient(shades: number) {
   // convert shade levels to colors
   return levels.map((x) => {
     if (x === 0) return '#E0E0E0'
-    if (x < 0.33) return lerpColor('#FFFBD6', '#FFDE69', progress(0, 0.33, x))
+    if (x < 0.33) return lerpColor('#E8F5E9', '#A5D6A7', progress(0, 0.33, x))
     if (x < 0.69)
-      return lerpColor('#FFDE69', '#FF9636', progress(0.33, 0.69, x))
+      return lerpColor('#A5D6A7', '#66BB6A', progress(0.33, 0.69, x))
     if (x < 0.82)
-      return lerpColor('#FF9636', '#FD7836', progress(0.69, 0.82, x))
-    return lerpColor('#FD7836', '#F93636', progress(0.82, 1, x))
+      return lerpColor('#66BB6A', '#43A047', progress(0.69, 0.82, x))
+    return lerpColor('#43A047', '#2E7D32', progress(0.82, 1, x))
   })
 }
