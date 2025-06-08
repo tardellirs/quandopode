@@ -1,7 +1,7 @@
 # 🗓️ Quando Pode?
 
-**Quando Pode?** é uma ferramenta simples, rápida e eficiente para agendamento de reuniões entre várias pessoas, desenvolvida em português.  
-O sistema facilita a escolha do melhor horário entre todos os participantes, sem necessidade de login ou integrações complexas.
+**Quando Pode?** é uma ferramenta simples, rápida e eficiente para agendamento de reuniões.  
+O sistema facilita a escolha do melhor horário entre todos os participantes, sem necessidade de login..
 
 > Baseado no projeto [Meetingbrew](https://github.com/csaye/meetingbrew), adaptado, traduzido e evoluído sob a licença MIT.
 
@@ -11,8 +11,7 @@ O sistema facilita a escolha do melhor horário entre todos os participantes, se
 
 - Criação rápida de eventos com múltiplas opções de horário
 - Participação de convidados sem login
-- Interface moderna e responsiva
-- Totalmente em português
+- Interface responsiva
 - Compartilhamento via link direto
 - Contador de eventos no Firestore
 - Deploy automático com Vercel
@@ -47,12 +46,12 @@ touch .env.local
 ### Exemplo de `.env.local`:
 
 ```env
-NEXT_PUBLIC_FIREBASE_API_KEY=coloque_sua_chave_aqui
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=quando-pode.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=quando-pode
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=quando-pode.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=1234567890
-NEXT_PUBLIC_FIREBASE_APP_ID=1:1234567890:web:abcdef123456
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
 ```
 
 ```bash
