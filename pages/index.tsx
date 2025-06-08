@@ -200,7 +200,7 @@ export default function Index() {
                 />
               </div>
               <p>
-                Você pode definir um ID personalizado que aparececerá no link
+                Você pode definir um ID personalizado que aparecerá no link
                 da sua reunião.
               </p>
             </div>
