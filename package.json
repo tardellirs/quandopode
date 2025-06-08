@@ -18,7 +18,7 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
-    "firebase": "^9.17.1",
+    "firebase": "^9.23.0",
     "moment-timezone": "^0.5.41",
     "next": "13.1.6",
     "react": "18.2.0",

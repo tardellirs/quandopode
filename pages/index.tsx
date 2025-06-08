@@ -24,8 +24,8 @@ import Select from 'react-select'
 
 // options for dates types
 const datesOptions = [
-  { value: 'dates', label: 'Specific Dates' },
-  { value: 'days', label: 'Days of the Week' },
+  { value: 'dates', label: 'Datas específicas' },
+  { value: 'days', label: 'Dias da semana' },
 ]
 
 // ids that cannot be taken for meetings
@@ -134,7 +134,7 @@ export default function Index() {
             className={styles.titleInput}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder='Event Title'
+            placeholder='Título da Reunião'
             ref={titleInput}
             wrap='hard'
             maxLength={100}
@@ -147,8 +147,8 @@ export default function Index() {
           />
           <div className={styles.datesTimes}>
             <div className={styles.dates}>
-              <h2>Which dates?</h2>
-              <p>Date Type</p>
+              <h2>Quais dias?</h2>
+              <p>Tipo de data:</p>
               <Select
                 className={styles.select}
                 value={datesOption}
@@ -167,8 +167,8 @@ export default function Index() {
               )}
             </div>
             <div className={styles.times}>
-              <h2>Which times?</h2>
-              <p>Timezone</p>
+              <h2>Quais horários?</h2>
+              <p>Fuso horário:</p>
               <TimezoneSelect
                 className={styles.select}
                 timezone={timezone}
@@ -183,7 +183,7 @@ export default function Index() {
           <div className={styles.options}>
             <div className={styles.idSection}>
               <div className={styles.idInput}>
-                <p>MeetingBrew.com/ </p>
+                <p>QuandoPode.com/ </p>
                 <input
                   value={id}
                   onChange={(e) => {
@@ -194,14 +194,14 @@ export default function Index() {
                     newId = newId.replaceAll('--', '-')
                     setId(newId)
                   }}
-                  placeholder='custom ID (optional)'
+                  placeholder='ID personalizado (opcional)'
                   maxLength={100}
                   spellCheck='false'
                 />
               </div>
               <p>
-                You can optionally set a custom id that will appear in the link
-                of your MeetingBrew.
+                Você pode definir um ID personalizado que aparececerá no link
+                da sua reunião.
               </p>
             </div>
             <button onClick={createMeeting}>
