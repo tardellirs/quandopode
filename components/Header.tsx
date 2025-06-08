@@ -33,7 +33,7 @@ export default function Header(props: Props) {
         <span style={{ flexGrow: 1 }} />
         <a
           className={styles.bigLink}
-          href='https://github.com/csaye/meetingbrew'
+          href='https://github.com/tardellirs/quandopode'
           target='_blank'
           rel='noopener noreferrer'
         >
