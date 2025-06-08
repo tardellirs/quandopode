@@ -134,7 +134,7 @@ export default function Index() {
             className={styles.titleInput}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder='Título da Reunião'
+            placeholder='Título da Reunião.'
             ref={titleInput}
             wrap='hard'
             maxLength={100}
