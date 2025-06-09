@@ -7,22 +7,22 @@ export default function About() {
       <Header className={styles.header} />
       <div className={styles.outerContent}>
         <div className={styles.content}>
-          <h1>MeetingBrew</h1>
+          <h1>Quando Pode?</h1>
           <p>
-            MeetingBrew é uma ferramenta moderna de agendamento que ajuda a
-            encontrar o melhor horário em comum para reunir. Foi criada por dois
-            estudantes de ciência da computação da Universidade de Michigan.
-            Obrigado por usar o MeetingBrew!
+            O <strong>Quando Pode?</strong> é uma ferramenta moderna de agendamento colaborativo que ajuda grupos a encontrarem o melhor horário para se reunir. Simples e rápido.
+          </p>
+          <p>
+            Este sistema é um projeto de código aberto mantido por Tardelli Stekel.
           </p>
           <div className={styles.contact}>
             <p>
               Entre em contato:{' '}
-              <a href='mailto:hi@meetingbrew.com'>hi@meetingbrew.com</a>
+              <a href='mailto:tardellirs@gmail.com'>tardellirs@gmail.com</a>
             </p>
             <p>
-              Dê uma estrela ao MeetingBrew no GitHub:{' '}
-              <a href='https://github.com/csaye/meetingbrew' target='_blank' rel='noopener noreferrer'>
-                github.com/csaye/meetingbrew
+              Veja o projeto no GitHub:{' '}
+              <a href='https://github.com/tardellirs/quandopode' target='_blank' rel='noopener noreferrer'>
+                github.com/tardellirs/quandopode
               </a>
             </p>
           </div>

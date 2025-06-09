@@ -16,14 +16,14 @@ export default function Header(props: Props) {
       <div className={styleBuilder([className, styles.innerContainer])}>
         <Link href='/'>
           <Image
-            src='/img/logo.svg'
-            width='218'
-            height='36'
+            src='/img/logo3.svg'
+            width='200'
+            height='80'
             alt='logo.svg'
             priority
           />
           <Image
-            src='/img/logosmall.svg'
+            src='/img/logosmall2.svg'
             width='36'
             height='36'
             alt='logosmall.svg'
