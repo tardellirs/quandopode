@@ -16,7 +16,7 @@ export default function Header(props: Props) {
       <div className={styleBuilder([className, styles.innerContainer])}>
         <Link href='/'>
           <Image
-            src='/img/logo3.svg'
+            src='/img/Quando.svg'
             width='200'
             height='80'
             alt='logo.svg'
