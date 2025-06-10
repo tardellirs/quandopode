@@ -181,7 +181,7 @@ export default function Index() {
             </div>
           </div>
           <div className={styles.options}>
-            <div className={styles.idSection}>
+           <div className={styles.idSection}>
               <div className={styles.idInput}>
                 <p>QuandoPode.com/ </p>
                 <input
@@ -213,7 +213,7 @@ export default function Index() {
               />
               Criar Evento
             </button>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
