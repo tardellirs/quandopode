@@ -17,8 +17,8 @@ export default function Header(props: Props) {
         <Link href='/'>
           <Image
             src='/img/logo.svg'
-            width='200'
-            height='80'
+            width='210'
+            height='100'
             alt='logo.svg'
             priority
           />
