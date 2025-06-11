@@ -62,50 +62,14 @@ export default function Index() {
 
   // creates a new meeting in firebase
   async function createMeeting() {
-    // if no title given
-    if (!title) {
-      window.alert('É necessário inserir um título.')
-      titleInput.current?.focus()
-      return
-    }
-    // if no dates selected
-    if (datesOption.value === 'dates' && !dates.length) {
-      window.alert('É necessário selecionar ao menos uma data.')
-      return
-    }
-    // if too many dates selected
-    if (datesOption.value === 'dates' && dates.length > 31) {
-      window.alert('Muitas datas selecionadas. O máximo é 31.')
-      return
-    }
-    // if no days selected
-    if (datesOption.value === 'days' && !days.length) {
-      window.alert('É necessário selecionar ao menos um dia.')
-      return
-    }
+    if (!validateTitle()) return
+    if (!validateDatesOrDays()) return
+    if (!await validateMeetingId()) return
+
     const meetingsRef = collection(db, 'meetings')
-    // check id
-    if (id) {
-      const idLower = id.toLowerCase()
-      // check id availability
-      const idReserved = reservedIds.includes(idLower)
-      let idTaken = false
-      if (!idReserved) {
-        const meetingRef = doc(meetingsRef, idLower)
-        const meetingDoc = await getDoc(meetingRef)
-        idTaken = meetingDoc.exists()
-      }
-      // if id not available
-      if (idReserved || idTaken) {
-        window.alert('ID da reunião indisponível. Escolha outro.')
-        return
-      }
-    }
-    // get meeting id
     const meetingId = id ? id : doc(meetingsRef).id.slice(0, 6).toLowerCase()
-    const idLower = meetingId.toLowerCase()
-    const meetingRef = doc(meetingsRef, idLower)
-    // create meeting
+    const meetingRef = doc(meetingsRef, meetingId.toLowerCase())
+
     const meetingBase = {
       id: meetingId,
       title,
@@ -114,15 +78,65 @@ export default function Index() {
       latest,
       created: Date.now(),
     }
+
     const meeting: Meeting =
       datesOption.value === 'dates'
         ? { ...meetingBase, type: 'dates', dates: dates.slice().sort() }
         : { ...meetingBase, type: 'days', days: days.slice().sort() }
+
     await setDoc(meetingRef, meeting)
-    // increment meeting count
+
     const statsRef = doc(db, 'app', 'stats')
     await updateDoc(statsRef, { meetings: increment(1) })
+
     Router.push(`/${meetingId}`)
+  }
+
+  function validateTitle(): boolean {
+    if (!title) {
+      window.alert('É necessário inserir um título.')
+      titleInput.current?.focus()
+      return false
+    }
+    return true
+  }
+
+  function validateDatesOrDays(): boolean {
+    if (datesOption.value === 'dates') {
+      if (!dates.length) {
+        window.alert('É necessário selecionar ao menos uma data.')
+        return false
+      }
+      if (dates.length > 31) {
+        window.alert('Muitas datas selecionadas. O máximo é 31.')
+        return false
+      }
+    }
+    if (datesOption.value === 'days' && !days.length) {
+      window.alert('É necessário selecionar ao menos um dia.')
+      return false
+    }
+    return true
+  }
+
+  async function validateMeetingId(): Promise<boolean> {
+    if (!id) return true
+
+    const idLower = id.toLowerCase()
+    if (reservedIds.includes(idLower)) {
+      window.alert('ID da reunião indisponível. Escolha outro.')
+      return false
+    }
+
+    const meetingsRef = collection(db, 'meetings')
+    const meetingRef = doc(meetingsRef, idLower)
+    const meetingDoc = await getDoc(meetingRef)
+    if (meetingDoc.exists()) {
+      window.alert('ID da reunião indisponível. Escolha outro.')
+      return false
+    }
+
+    return true
   }
 
   return (

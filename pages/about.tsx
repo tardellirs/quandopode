@@ -9,7 +9,7 @@ export default function About() {
         <div className={styles.content}>
           <h1>Quando Pode?</h1>
           <p>
-            O <strong>Quando Pode?</strong> é uma ferramenta moderna de agendamento colaborativo que ajuda grupos a encontrarem o melhor horário para se reunir. Simples e rápido.
+            O <strong>Quando Pode?</strong> é a forma mais simples e colaborativa de agendar reuniões em grupo. Rápido, intuitivo e eficiente!
           </p>
           <p>
             Este sistema é um projeto de código aberto mantido por Tardelli Stekel.
