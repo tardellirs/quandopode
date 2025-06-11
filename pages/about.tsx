@@ -19,12 +19,6 @@ export default function About() {
               Entre em contato:{' '}
               <a href='mailto:tardellirs@gmail.com'>tardellirs@gmail.com</a>
             </p>
-            <p>
-              Veja o projeto no GitHub:{' '}
-              <a href='https://github.com/tardellirs/quandopode' target='_blank' rel='noopener noreferrer'>
-                github.com/tardellirs/quandopode
-              </a>
-            </p>
           </div>
         </div>
       </div>

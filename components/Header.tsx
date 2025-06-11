@@ -31,14 +31,6 @@ export default function Header(props: Props) {
           />
         </Link>
         <span style={{ flexGrow: 1 }} />
-        <a
-          className={styles.bigLink}
-          href='https://github.com/tardellirs/quandopode'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          GitHub
-        </a>
         <Link href='/about'>Sobre</Link>
         <button onClick={() => Router.push('/')}>
           <Image src='/icons/add.svg' width='24' height='24' alt='add.svg' />
