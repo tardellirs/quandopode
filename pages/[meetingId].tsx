@@ -96,7 +96,7 @@ export default function MeetingPage() {
   // copies invite link to clipboard
   async function copyLink() {
     if (!meeting) return
-    await navigator.clipboard.writeText(`https://meetingbrew.com/${meeting.id}`)
+    await navigator.clipboard.writeText(`https://quandopode.com/${meeting.id}`)
     // show copy state
     if (copied) return
     setCopied(true)
@@ -366,7 +366,7 @@ export default function MeetingPage() {
               />
             </div>
             <p className={styles.info}>
-              ⓘ Se voltar, digite o mesmo nome para editar a resposta
+              ⓘ Para editar sua resposta digite o seu nome novamente.
             </p>
             <div className={styles.content}>
               <div className={styles.respondents}>
