@@ -233,7 +233,7 @@ export default function MeetingPage() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{meeting ? meeting.title : 'MeetingBrew'}</title>
+        <title>{meeting ? meeting.title : 'Quando Pode?'}</title>
       </Head>
       <Header className={styles.header} />
       <div className={styles.outerContent}>
