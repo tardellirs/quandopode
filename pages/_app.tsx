@@ -15,9 +15,9 @@ export default function App(props: AppProps) {
         <title>Quando Pode?</title>
         <meta
           name='description'
-          content='A modern way to schedule your meetings.'
+          content='Plataforma colaborativa para marcar reuniões em grupo. Rápida e intuitiva!'
         />
-        <meta property='og:image' content='/img/meetingBrew.png' />
+        <meta property='og:image' content='/img/Quando.png' />
         <link rel='icon' href='/favicons/favicon.ico' />
         <link
           rel='apple-touch-icon'
